@@ -5,19 +5,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <title>Formulario</title>
+    <img src="logo.png" alt="Descripción de la imagen" width="80px">
+
 </head>
 <body>
     <h1>Formulario RRHH</h1>
     <h3>Inserta los datos:</h3>
     <form>
-        <div class="elem-group">
-            <label for ="Name">Nombre</label>
-            <input type="text" id="name" name="employer_name" placeholder="Introduce un nombre" required>
-        </div>
-        <div class="elem-group">
-            <label for ="email">Email</label>
-            <input type="email" id="email" name="employer_email" placeholder="Introduce un mail" required>
-        </div>
+        <!-- Correo del remitente (obligatorio) -->
+        <label for="correo">Correo del remitente:</label>
+        <input type="email" id="correo" name="correo" required><br>
+      
+        <!-- Opciones: alta, baja, cambio de rol, traslado o reactivar -->
+        <label for="opciones">¿Qué quieres hacer?</label>
+        <select id="opciones" name="opciones">
+            <option value="alta">Alta</option>
+            <option value="baja">Baja</option>
+            <option value="cambio_rol">Cambio de Rol</option>
+            <option value="traslado">Traslado</option>
+            <option value="reactivar">Re-activar</option>
+        </select><br>
+
+        <!-- Centro (obligatorio) -->
+        <label for="centro">Centro:</label>
+        <select id="centro" name="centro" required>
+            <option value="Badalona">Badalona</option>
+            <option value="Barcelona">Barcelona</option>
+            <option value="Granollers">Granollers</option>
+            <option value="Mataró">Mataró</option>
+            <option value="Sant Cugat">Sant</option>
+            <option value="Hospitalet">Hospitalet</option>
+            <option value="Santa Coloma">Santa</option>
+            <option value="Sabadell">Sabadell</option>
+            <option value="Cerdanyola">Cerdanyola</option>
+            <option value="Terrassa">Terrassa</option>
+            <option value="Tarragona">Tarragona</option>
+            <option value="Girona">Girona</option>
+            <option value="Glòries">Glòries</option>
+            <option value="Sagrera">Sagrera</option>
+            <option value="Cornellà">Cornellà</option>
+            <option value="Lleida">e</option>
+            <option value="Valladolid">Valladolid</option>
+            <option value="Madrid Alcorcón">Madrid</option>
+            <option value="Horta">Horta</option>
+            <option value="Palma">Palma</option>
+            <option value="Castellon">Castellon</option>
+            <option value="Reus">Reus</option>
+            <option value="Rubi">Rubi</option>
+            <option value="Les corts">corts</option>
+            <option value="Manresa">Manresa</option>
+            <option value="figueres">figueres</option>
+            <option value="albacete">albacete</option>
+        </select><br>
+
+        <!-- Otros campos obligatorios: Nombre, Apellidos, Alias, etc. -->
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required><br>
+        <label for="primer apellido">Primer apellido:</label>
+        <input type="text" id="primer apellido" name="primer apellido" required><br>
+        <!-- ... (Agrega los demás campos aquí) ... -->
+
+        <!-- Fecha de alta y fecha de aparición en gestión (obligatorios) -->
+        <label for="fecha_alta">Fecha de alta:</label>
+        <input type="datetime-local" id="fecha_alta" name="fecha_alta" required><br>
+
+        <label for="fecha_gestion">Fecha de aparición en gestión:</label>
+        <input type="datetime-local" id="fecha_gestion" name="fecha_gestion" required><br>
+
+        <!-- Puesto -->
+        <label for="puesto">Puesto:</label>
+        <input type="text" id="puesto" name="puesto"><br>
+
+        <!-- Botón de envío -->
+        <input type="submit" value="Enviar">
     </form>
     
 </body>
